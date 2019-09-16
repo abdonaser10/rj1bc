@@ -1,12 +1,12 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "$"
-var adminprefix = '$'
+var prefix = "#"
+var adminprefix = '#'
 
 
 
 
-  var prefix = "$";
+  var prefix = "#";
 
   client.on("message", message => {
   
@@ -23,7 +23,7 @@ var adminprefix = '$'
   });
 
 client.on('message', message => {
-    if (message.content.startsWith("$avatar")) {
+    if (message.content.startsWith("#avatar")) {
         var mentionned = message.mentions.users.first();
     var x5bzm;
       if(mentionned){
@@ -48,12 +48,7 @@ client.on('ready',  () => {
   });
 
 
-  client.on('message', msg => {
-    if(msg.content === '$inv')
-    msg.reply('**Link Bot. https://discordapp.com/oauth2/authorize?client_id=623152020093927424&permissions=2080374975&scope=bot **')
-  });
-
-var prefix = "$";  
+var prefix = "#";  
 client.on('message', message => {
   if(message.content === prefix + "help"){
     var code = client.emojis.find(emoji => emoji.name === "code" )
@@ -65,7 +60,6 @@ client.on('message', message => {
     var Music = client.emojis.find(emoji => emoji.name === "Music" )
     message.channel.send(`${yes1} **| قائمة الأوامر
 ╔════════════════════════╗
-║${yes1} | \`${prefix}inv\` => لـدعوت البوت الي سيرفر. ${yes1}
 ║${yes1} | \`${prefix}bc\` => لأرسال برود كاست للأونلاين. ${yes1}     
 ║${yes1} | \`${prefix}avatar\` => لعرض الصورة حقك. ${yes1}
 ║${yes1} | \`${prefix}bot\` => لعرض معلومات البوت. ${yes1}
@@ -80,7 +74,7 @@ client.on('message', message => {
 
  //=================================================================================
 client.on('message', message => {
-var prefix = "$";
+var prefix = "#";
        if(message.content === prefix + "mc") {
                            if(!message.channel.guild) return message.reply('** This command only for servers**');
 
@@ -107,7 +101,7 @@ var prefix = "$";
        
 });
 
-var prefix = "$";
+var prefix = "#";
 client.on('message',async message => {
   if (message.content.startsWith(prefix+"bot")) {
   message.channel.send({
